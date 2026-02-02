@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-body bg-white;
+  }
+}
+
+@layer components {
+  .btn-coral {
+    @apply bg-coral text-white font-serif font-bold transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
+  }
+  .btn-coral:hover {
+    @apply bg-mint -translate-y-[2px] shadow-[0_10px_20px_-10px_rgba(255,140,122,0.5)];
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
